@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .search-form{
+    @apply w-5/6 bg-white border-[1px] border-[D1D5DB] rounded-[80px] text-[12px] font-thin mt-8  m-5 px-5 py-3 flex flex-row items-center gap-5;
+  }
+
+  .search-input {
+    @apply flex-1 font-thin w-full h-auto outline-none  text-gray-500;
+  }
+}

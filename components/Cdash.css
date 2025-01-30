@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+    .left-con{
+        @apply bg-white w-1/4 flex-col h-screen fixed left-0 z-30 justify-center items-center;
+    }
+
+    .cards{
+        @apply overflow-y-auto h-full pb-28 flex-col justify-center items-center lg:pl-4 lg:ml-4;
+    }
+
+    .right-con{
+        @apply bg-[#F3F8FC] w-3/4 h-screen ml-[25%] justify-evenly;
+    }
+
+    .std-card{
+        @apply bg-[rgba(24,58,96,0.09)] rounded p-10 m-4 text-left w-10/12 relative z-50 shadow-lg;
+    }
+
+    .alertboxc{
+        @apply fixed top-0 left-1/2 transform -translate-x-1/2 bg-[rgba(24,58,96,0.5)] text-white p-4 rounded shadow-lg transition-transform duration-500 -translate-y-full
+    }
+    .imglogo{
+        @apply p-4 justify-center items-center flex w-full;
+    }
+
+    .callswbtndiv{
+        @apply m-2 justify-center;
+    }
+
+    @keyframes numberIncrease {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        50% {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+        51% {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      
+      .number {
+        display: inline-block;
+      }
+      .animate {
+        animation: numberIncrease 0.5s ease-in-out;
+      }
+}
